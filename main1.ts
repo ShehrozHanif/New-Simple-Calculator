@@ -24,14 +24,6 @@ const input2 = await inquirer.prompt({
     message:"Kindly Enter the Second Number",
 
 });
-// const input3 = await inquirer.prompt({
-      
-//     name:"Operator",
-//     type:"list",
-//     message:"kindly select the Operator",
-//     choices:["Addition" ,"Subtraction","Multiplication","Division","Modulous","Exponential"]
-
-// });
 
 if(input3.Operator === "Addition"){
     console.log(`Afer Adding those of Two number your Result is = ${input1.num1 + input2.num2}`)
