@@ -1,3 +1,4 @@
+#! /usr/bin/env node 
 import inquirer from "inquirer";
 const input1 = await inquirer.prompt({
       
@@ -5,14 +6,6 @@ const input1 = await inquirer.prompt({
         type:"number",
         message:"Kindly Enter the First Number",
   
-});
-
-const input2 = await inquirer.prompt({
-      
-    name:"num2",
-    type:"number",
-    message:"Kindly Enter the Second Number",
-
 });
 
 const input3 = await inquirer.prompt({
@@ -24,10 +17,26 @@ const input3 = await inquirer.prompt({
 
 });
 
+const input2 = await inquirer.prompt({
+      
+    name:"num2",
+    type:"number",
+    message:"Kindly Enter the Second Number",
+
+});
+// const input3 = await inquirer.prompt({
+      
+//     name:"Operator",
+//     type:"list",
+//     message:"kindly select the Operator",
+//     choices:["Addition" ,"Subtraction","Multiplication","Division","Modulous","Exponential"]
+
+// });
+
 if(input3.Operator === "Addition"){
     console.log(`Afer Adding those of Two number your Result is = ${input1.num1 + input2.num2}`)
 }else if(input3.Operator === "Subtraction"){
-    console.log(`Afer Subtracting of those Two number your Result is = ${input2.num2 - input1.num1}`)
+    console.log(`Afer Subtracting of those Two number your Result is = ${input1.num1 - input2.num2 }`)
 }else if(input3.Operator === "Multiplication"){
     console.log(`Afer Multiolication of those Two number your Result is = ${input1.num1 * input2.num2}`)
 }else if(input3.Operator === "Division" ){
@@ -44,3 +53,5 @@ if(input3.Operator === "Addition"){
 }else{
     console.log("Invalid Operator")
 };
+
+export{};
